@@ -1,0 +1,19 @@
+[package]
+name = "nv-gpu-tracer"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "nv-gpu-tracer"
+path = "src/main.rs"
+
+[dependencies]
+libbpf-rs = "0.26"
+libbpf-sys = "1.5"
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+ctrlc = "3"
+libc = "0.2"
+
+[build-dependencies]
+libbpf-cargo = "0.26"
